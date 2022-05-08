@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Configuracoes View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="ConfiguracoesViewController" customModule="Controle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2000" minValue="1000" maxValue="10000" translatesAutoresizingMaskIntoConstraints="NO" id="o1G-ot-NtV">
+                                <rect key="frame" x="14" y="116" width="292" height="31"/>
+                                <connections>
+                                    <action selector="alterouValor:" destination="Y6W-OH-hqX" eventType="valueChanged" id="iBj-Te-Xd2"/>
+                                </connections>
+                            </slider>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vf4-wC-dLj">
+                                <rect key="frame" x="16" y="60" width="288" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="629-2k-paG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saldo Meta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KM-mJ-cyX">
+                                <rect key="frame" x="16" y="32" width="86" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63c-Md-WQw">
+                                <rect key="frame" x="16" y="178" width="288" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="xNi-xi-JN6"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Salvar">
+                                    <color key="titleColor" red="0.01377394237" green="0.26788246630000001" blue="0.1215420291" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveUpdate:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="UM1-Gd-YCM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Vf4-wC-dLj" secondAttribute="trailing" constant="16" id="Abb-V5-Hej"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="63c-Md-WQw" secondAttribute="trailing" constant="16" id="Ar8-ES-2O1"/>
+                            <constraint firstItem="63c-Md-WQw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Gcl-4R-Np3"/>
+                            <constraint firstItem="o1G-ot-NtV" firstAttribute="top" secondItem="Vf4-wC-dLj" secondAttribute="bottom" constant="8" id="Qbt-ta-5OZ"/>
+                            <constraint firstItem="Vf4-wC-dLj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="RXB-sB-qXx"/>
+                            <constraint firstItem="6KM-mJ-cyX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="XN4-hF-GWS"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="o1G-ot-NtV" secondAttribute="trailing" constant="16" id="fMn-AU-XoV"/>
+                            <constraint firstItem="Vf4-wC-dLj" firstAttribute="top" secondItem="6KM-mJ-cyX" secondAttribute="bottom" constant="8" id="fqe-Y2-k0J"/>
+                            <constraint firstItem="6KM-mJ-cyX" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="32" id="q6U-eE-AKr"/>
+                            <constraint firstItem="63c-Md-WQw" firstAttribute="top" secondItem="o1G-ot-NtV" secondAttribute="bottom" constant="32" id="u02-ua-GSQ"/>
+                            <constraint firstItem="o1G-ot-NtV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="xHw-bw-KcH"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="xhC-12-H7d" appends="YES" id="22h-9x-uUY"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="fieldValor" destination="Vf4-wC-dLj" id="Hs5-CG-Czo"/>
+                        <outlet property="sliderValuer" destination="o1G-ot-NtV" id="S5a-RF-KQX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="xhC-12-H7d">
+                    <connections>
+                        <action selector="removeKeyboard:" destination="Y6W-OH-hqX" id="YhO-oT-4nO"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-23" y="56"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

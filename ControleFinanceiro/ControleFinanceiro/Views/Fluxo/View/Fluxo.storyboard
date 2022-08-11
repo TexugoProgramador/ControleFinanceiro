@@ -371,6 +371,14 @@
             <point key="canvasLocation" x="860.625" y="-359.15492957746477"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="qpO-By-Fua">
+            <size key="intrinsicContentSize" width="43" height="30"/>
+        </designable>
+        <designable name="wAQ-PG-KQz">
+            <size key="intrinsicContentSize" width="92" height="30"/>
+        </designable>
+    </designables>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
